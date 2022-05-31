@@ -29,6 +29,7 @@ class AppTest {
             a2.setB_R1(b);
             b.setA_R1(a2);
             em.persist(b);
+
             transaction.commit();
 
             A result = em.createQuery("SELECT a FROM A a WHERE a.id.aOne = :param", A.class)
